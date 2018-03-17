@@ -35,7 +35,7 @@ class ApiController extends AbstractController
      */
     public function table()
     {
-        $table = $this->request->get('table');
+        $table = $this->request->post('table');
         $allowTable = new AllowTable();
 
         if ($allowTable->isAllow($table)) {
@@ -70,8 +70,8 @@ class ApiController extends AbstractController
     {
         $status = 'ok';
         $payload = null;
-        $sessionId = $this->request->get('sessionId');
-        $userEmail = $this->request->get('userEmail');
+        $sessionId = $this->request->post('sessionId');
+        $userEmail = $this->request->post('userEmail');
         $em = new EntityManager();
         /** @var UserOnSessionRepository $stmt */
         $stmt = $em->getRepository('UserOnSession');

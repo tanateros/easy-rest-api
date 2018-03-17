@@ -59,3 +59,12 @@ ALTER TABLE `UserOnSession` ADD UNIQUE (
 `Session_ID`
 );
 
+INSERT INTO `test_task`.`Session` (
+`ID` ,
+`Name` ,
+`TimeOfEvent` ,
+`Description`
+)
+VALUES (
+NULL , 'test', '0000-00-00 00:00:00', ''
+);
