@@ -11,7 +11,7 @@ Last:
 
 Require
 =
-- PHP 5.6+
+- PHP 5.5+
 
 - MySQL 5.*
 
